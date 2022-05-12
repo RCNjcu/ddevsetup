@@ -22,7 +22,7 @@ if [ $setup == y ] || [ $setup == yes ]; then
 	ddev import-db --src=CurrentDatabase.sql.gz
 	ddev drush cr
 	ddev drush en stage_file_proxy -y
-	ddev drush config-set stage_file_proxy.settings origin "https://www.njcu.edu/"
+	ddev drush config-set stage_file_proxy.settings origin "SITE"
 	ddev start
 else
 	rm current.sql.gz
