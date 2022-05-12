@@ -1,0 +1,13 @@
+## USE THIS IF YOU'D RATHER DO AUTOMATED INSTALLATION ##
+echo "THIS WILL INSTALL DATABASE SETUP SCRIPT FOR 
+Make sure you have the following installed beforehand.
+-DOCKER
+-Your multidev pulled and checked out"
+echo -n "Install Raynes script for database import automation?[Y/N]"
+read -r "install"
+if [[ install == y ]]; then
+	mkdir -p ~/raynescripts
+curl -L https://github.com/pantheon-systems/terminus/releases/download/3.0.6/terminus.phar --output terminus
+chmod +x database-setup
+sudo ln -s ~/raynescripts/terminus /usr/local/bin/database-setup
+fi
