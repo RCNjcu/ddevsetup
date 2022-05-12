@@ -7,7 +7,7 @@ echo -n "Install Raynes script for database import automation?[Y/N]"
 read -r "install"
 if [[ install == y ]]; then
 	mkdir -p ~/raynescripts
-curl -L https://github.com/pantheon-systems/terminus/releases/download/3.0.6/terminus.phar --output terminus
+curl -L LINK TO REPOSITORY FILE
 chmod +x database-setup
 sudo ln -s ~/raynescripts/terminus /usr/local/bin/database-setup
 fi
