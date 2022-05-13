@@ -15,7 +15,9 @@ read -r setup
 if [ $setup == y ] || [ $setup == yes ]; then
 	echo -e "This is for first time setup.\nUse ddevstart after this setup"
 	ddev config
-	echo -e "Enter name of the file you want to use.\nMake sure the database file is in the same directory\n(It's much easier)"
+	echo -e "#######################################################
+			Enter name of the file you want to use.\nMake sure the database file is in the same directory\n(It's much easier)
+			########################################################"
 	echo -n "Database File:"
 	read -r database
 	mv $database $PWD/CurrentDatabase.sql.gz
